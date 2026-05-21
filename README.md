@@ -1,8 +1,9 @@
-#This is a practice Repo, it includes
-##Controller
-##Services
-##Exception Handling
-##MySQL Database
+This is a practice Repo, it includes
+#
+Controller
+Services
+Exception Handling
+MySQL Database
 #
 #
-##MORE COMING....
+MORE COMING....

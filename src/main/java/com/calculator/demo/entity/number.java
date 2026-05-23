@@ -7,7 +7,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 @Entity
 @Table(name="calculation")
-public class Number {
+public class Number{
 
   @Id                     //to make primary key
   @GeneratedValue(strategy=GenerationType.IDENTITY)     // to tell db to auto generate IDs

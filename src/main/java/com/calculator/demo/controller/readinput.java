@@ -1,6 +1,6 @@
 package com.calculator.demo.controller;
 
-import com.calculator.demo.entity.number;
+import com.calculator.demo.entity.Number;
 import com.calculator.demo.services.CalcServices;
 
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,29 +17,30 @@ public class readinput {
         calc= service;
     }
 
-    public number num;
+    public Number num;
     @GetMapping("/")
     public String read(){
         return "This is a calculator API";
     }
 
     @PostMapping("/add")
-    public double addnum(@RequestBody number num){
+    public double addnum(@RequestBody Number num){
         return calc.add(num.getA(),num.getB());
     }
 
     @PostMapping("/sub")
-    public double subnum(@RequestBody number num){
+    public double subnum(@RequestBody Number num){
         return calc.sub(num.getA(),num.getB());
     }
 
     @PostMapping("/mul")
-    public double mulnum(@RequestBody number num){
+    public double mulnum(@RequestBody Number num){
         return calc.mul(num.getA(),num.getB());
     }
 
     @PostMapping("/div")
-    public double divnum(@RequestBody number num){
+    public double divnum(@RequestBody Number num){
         return calc.div(num.getA(),num.getB());
     }
 }
+

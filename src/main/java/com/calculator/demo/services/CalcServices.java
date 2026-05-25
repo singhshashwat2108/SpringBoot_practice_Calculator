@@ -12,11 +12,11 @@ public class CalcServices {
   public CalcServices(CalculationRepository repo){
     this.repo=repo;
   }
-
-  Number n= new Number();
   
   public double add(double a,double b){
     if(a<0 || b<0) throw new ArithmeticException("Negative values not allowed");
+
+    Number n= new Number();
     n.setA(a);
     n.setB(b);
     n.setOperation("Add");
@@ -27,6 +27,8 @@ public class CalcServices {
 
   public double sub(double a,double b){
     if(a<0 || b<0) throw new ArithmeticException("Negative values not allowed");
+
+    Number n= new Number();
     if(a>b){
       n.setA(a);
       n.setB(b);
@@ -46,6 +48,8 @@ public class CalcServices {
 
   public double mul(double a,double b){
     if(a<0 || b<0) throw new ArithmeticException("Negative values not allowed");
+
+    Number n= new Number();
     n.setA(a);
     n.setB(b);
     n.setOperation("Mul");
@@ -56,6 +60,8 @@ public class CalcServices {
 
   public double div(double a,double b){
     if(a<0 || b<0) throw new ArithmeticException("Negative values not allowed");
+
+    Number n= new Number();                      //write the object of the entity in the function so that new obejects are created and the data is stored in different rows, as making the object outside the service class will have the same id, so same row will be updated.
     if(a>b){
       n.setA(a);
       n.setB(b);

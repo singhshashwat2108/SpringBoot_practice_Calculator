@@ -12,6 +12,7 @@ public class Number{
   @Id                     //to make primary key
   @GeneratedValue(strategy=GenerationType.IDENTITY)     // to tell db to auto generate IDs
   private int id;
+  
   private double a;
   private double b;
   private String operation;

@@ -1,18 +1,17 @@
 package com.calculator.demo.controller;
 
-import com.calculator.demo.entity.Number;
-import com.calculator.demo.services.CalcServices;
-
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.calculator.demo.entity.Number;
+import com.calculator.demo.services.CalcServices;
 
 @RestController
 public class readinput {
 
-    public  CalcServices calc;
+    public  CalcServices calc; 
     public readinput(CalcServices service){
         calc= service;
     }
